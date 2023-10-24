@@ -4,7 +4,7 @@
  This project is meant to help me figure out exactly _how_ I would go about making a project of this scale.
 
 ## How?
- **Libs Used:**
+ **Libs Used:**  
      [libtonc](https://devkitpro.org/wiki/Getting_Started) - From devkitPro.
  
  **Help From:**  
