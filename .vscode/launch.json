@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "targetArchitecture": "arm",
+            "request": "launch",
+            "program": "${workspaceFolder}/a.gba",
+            "miDebuggerServerAddress": "localhost:2345",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${env:DEVKITARM}/bin/arm-none-eabi-gdb.exe",
+            "setupCommands": [
+                {
+                    "text": "shell ${workspaceFolder}/DoMake.bat"
+                }
+            ]
+        }
+    ]
+}
