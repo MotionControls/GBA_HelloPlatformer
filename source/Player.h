@@ -4,7 +4,9 @@
 #include <tonc.h>
 #include "Defs.h"
 
-void InitPlayer(int tileID);
+#define PLAYER_ACCEL    0.05
+
+void InitPlayer(int tileID, int oamID);
 void StepPlayer();
 
 #endif

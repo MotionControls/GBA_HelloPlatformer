@@ -2,8 +2,9 @@
 #define DEFS_H
 
 #include <tonc.h>
+#include "Sprites.h"
 
-#ifndef ISMAIN
+#ifdef ISMAIN
     #define def
 #else
     #define def extern
@@ -22,6 +23,7 @@ def O_WARDEN Warden;
 
 typedef struct O_LEVEL{
     int tileArray[(SCR_WID*SCR_HGT)/8];
+    int eid;                            // Effect ID (Wind, Ice, etc.)
 }O_LEVEL;
 def O_LEVEL Level;
 
@@ -34,14 +36,19 @@ typedef struct{
 }Vec2s;
 
 typedef struct{
+    FIXED x,y;
+}Vec2F;
+
+typedef struct{
     u16 x,y,w,h;
 }Rect;
 
 typedef struct O_PLAYER{
-    u16 tid;
+    u16 tid, oid;
+    FIXED x,y;
     Rect rect;
-    Vec2s speed;
+    Vec2F speed;
 }O_PLAYER;
-def O_PLAYER player;
+def O_PLAYER Player;
 
 #endif
