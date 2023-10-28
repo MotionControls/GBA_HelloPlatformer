@@ -7,7 +7,6 @@ void InitPlayer(int tileID, int oamID){
         .x = 0, .y = 0,
         .rect = {0,0,16,16},
         .xs = 0, .ys = 0,
-        //.speed = {0,0},
     };
 
     InitSprite(tileID, S_Player_IdleTiles, S_Player_IdleTilesLen, S_Player_IdlePal, S_Player_IdlePalLen);
@@ -23,11 +22,15 @@ void StepPlayer(){
         Player.ys += 0.05;
         if(Player.ys > 4)
             Player.ys = 4;
+        
+        if(Player.ys < 0 && !key_held(KEY_A))
+            Player.ys /= 2;
     }else{
         Player.ys = 0;
         Player.y = SCR_HGT - 16;
+        if(key_held(KEY_A))
+            Player.ys = -1.5;
     }
-
     Player.y += Player.ys;
     
     obj_set_pos(&Warden.oamArray[Player.oid], (int)Player.x, (int)Player.y);
