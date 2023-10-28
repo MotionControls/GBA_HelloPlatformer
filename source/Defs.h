@@ -36,18 +36,14 @@ typedef struct{
 }Vec2s;
 
 typedef struct{
-    FIXED x,y;
-}Vec2F;
-
-typedef struct{
     u16 x,y,w,h;
 }Rect;
 
 typedef struct O_PLAYER{
     u16 tid, oid;
-    FIXED x,y;
+    float x,y;
     Rect rect;
-    Vec2F speed;
+    float xs,ys;
 }O_PLAYER;
 def O_PLAYER Player;
 
