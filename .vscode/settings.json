@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "types.h": "c",
-        "level_0_0.h": "c"
+        "s_player_idle.h": "c",
+        "s_player_run.h": "c",
+        "s_player_skid.h": "c"
     }
 }
