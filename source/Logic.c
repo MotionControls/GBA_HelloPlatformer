@@ -7,6 +7,8 @@ void InitLogic(){
         .oamCount = 0,
         .curLevel = 0,
     };
+    InitBackground(Level_0Tiles, Level_0TilesLen, Level_0Pal, Level_0PalLen, Level_0Map, Level_0MapLen);
+    REG_BG0CNT = BG_SIZE0 | (10 << 8);
 
     InitPlayer(0,0);
 }

@@ -3,6 +3,7 @@
         "types.h": "c",
         "s_player_idle.h": "c",
         "s_player_run.h": "c",
-        "s_player_skid.h": "c"
+        "s_player_skid.h": "c",
+        "tonc.h": "c"
     }
 }
