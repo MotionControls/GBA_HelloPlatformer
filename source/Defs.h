@@ -17,12 +17,13 @@
 typedef struct O_WARDEN{
     OBJ_ATTR oamArray[OAM_MAX];
     int oamCount;
-    int curLevel;
+    int curLevel, curScreen;
+    int camx, camy;
+    int tolxMin, tolxMax;   // How far from the middle of the screen player has to be to scroll.
 }O_WARDEN;
 def O_WARDEN Warden;
 
 typedef struct O_LEVEL{
-    int tileArray[(SCR_WID*SCR_HGT)/8];
     int eid;                            // Effect ID (Wind, Ice, etc.)
 }O_LEVEL;
 def O_LEVEL Level;
