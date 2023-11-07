@@ -9,4 +9,6 @@
 void InitPlayer(int tileID, int oamID);
 void StepPlayer();
 
+int GetCollision(int x, int y);
+
 #endif
