@@ -17,9 +17,9 @@
 typedef struct O_WARDEN{
     OBJ_ATTR oamArray[OAM_MAX];
     int oamCount;
-    int curLevel, curScreen;
+    int curLevel, curScreen, maxScreen;
     int camx, camy;
-    int tolxMin, tolxMax;   // How far from the middle of the screen player has to be to scroll.
+    int tolxMin, tolxMax;               // How far from the middle of the screen player has to be to scroll.
 }O_WARDEN;
 def O_WARDEN Warden;
 
@@ -45,6 +45,7 @@ typedef struct O_PLAYER{
     float x,y;
     Rect rect;
     float xs,ys;
+    int lastDir;
 }O_PLAYER;
 def O_PLAYER Player;
 

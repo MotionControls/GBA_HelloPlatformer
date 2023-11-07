@@ -7,6 +7,7 @@ void InitPlayer(int tileID, int oamID){
         .x = 0, .y = 0,
         .rect = {0,0,16,16},
         .xs = 0, .ys = 0,
+        .lastDir = 0,
     };
 
     InitSprite(tileID, S_Player_IdleTiles, S_Player_IdleTilesLen, S_Player_IdlePal, S_Player_IdlePalLen);
@@ -16,6 +17,10 @@ void InitPlayer(int tileID, int oamID){
 
 void StepPlayer(){
     Player.xs = key_tri_horz() * 2;
+    if(Player.xs > 0)
+        Player.lastDir = 1;
+    else if(Player.xs < 0)
+        Player.lastDir = 0;
 
     if(Player.y < SCR_HGT - 16){
         Player.ys += 0.05;

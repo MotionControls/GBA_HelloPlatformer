@@ -8,4 +8,6 @@
 void InitLogic();
 void StepLogic();
 
+void ScrollScreen();
+
 #endif
